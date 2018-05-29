@@ -1,10 +1,6 @@
-# Lista de TO-DO (Tareas pendientes) en Angular
+# XTRest - Tareas pendientes de un equipo de Desarrollo
 
 [![Build Status](https://travis-ci.org/uqbar-project/eg-tareas-angular-es6.svg?branch=master)](https://travis-ci.org/uqbar-project/eg-tareas-angular-es6)
-
-![video](video/demo.gif)
-
-<img src="https://cloud.githubusercontent.com/assets/4549002/17751553/fa4e9aaa-649d-11e6-8593-5808b2c57611.png" width="140px" height="140px"></img>
 
 Tenés dos versiones
 
