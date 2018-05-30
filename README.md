@@ -54,7 +54,7 @@ INFO  - Server                     - Started @611ms
 
 ### Rutas
 
-Una vez levantado el servidor, pueden ir a su navegador preferido y buscar la URL http://localhost:9000/, que les mostrará la lista de rutas disponibles:
+Una vez levantado el servidor, escriban la siguiente URL http://localhost:9000/ en su navegador preferido, que les mostrará la lista de rutas disponibles:
 
 ![images](images/Rutas_Tareas.png)
 
@@ -68,7 +68,7 @@ Pero también para ver los datos de una tarea en particular, como la que tiene e
 - Pedido GET
 - URL http://localhost:9000/tareas/1
 
-![video](video/postman_get_tareas.gif)
+![video](video/postman_gets_tareas.gif)
 
 Para modificar una tarea, podemos hacer un pedido PUT que contenga la nueva información de la tarea. Esto lo podemos hacer copiando el JSON que nos devuelve como respuesta la ruta http://localhost:9000/tareas/1 y pegándolo en el body de nuestro request PUT. El siguiente video ilustra esta situación:
 
