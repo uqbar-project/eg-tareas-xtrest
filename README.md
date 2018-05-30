@@ -14,13 +14,18 @@ Este ejemplo permite actualizar y mostrar las tareas pendientes que tiene un equ
 
 ## Servicios REST
 
-El controller Tareas levanta el servidor HTTP [Jetty](https://www.eclipse.org/jetty/) en el puerto 9000:
+El main del controller principal levanta el servidor HTTP [Jetty](https://www.eclipse.org/jetty/) en el puerto 9000:
 
 ```xtend
 def static void main(String[] args) {
 	XTRest.start(9000, UsuariosController, TareasController)
 }
 ```
+
+Los controllers que tenemos disponibles son UsuariosController y TareasController.
+
+
+### Cómo levantar el servidor REST
 
 Las opciones para probarlo (ya sea con POSTMAN o una aplicación cliente) son las siguientes:
 
@@ -37,7 +42,7 @@ Esto genera un _jar_, o archivo comprimido donde están los .class necesarios pa
 $ java -jar target/tareas-angular-xtrest-0.0.1-SNAPSHOT-jar-with-dependencies.jar
 ```
 
-El nombre del jar puede variar, deben buscarlo en el directorio target del raíz. Una vez hecho esto visualizarán en la consola el log del servidor levantado:
+El nombre del jar puede variar, deben buscarlo en el directorio target del raíz. Entonces visualizarán en la consola el log del servidor levantado:
 
 ```bash
 INFO  - log                        - Logging initialized @164ms
