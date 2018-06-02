@@ -50,8 +50,10 @@ class TareasController {
 			actualizado.asignarFecha(body.getPropertyValue("fecha"))
 			
 			val asignadoA = body.getPropertyValue("asignadoA")
-			val asignatario = RepoUsuarios.instance.getAsignatario(asignadoA)
-			actualizado.asignarA(asignatario)
+			if (!asignadoA.equals("")) {
+				val asignatario = RepoUsuarios.instance.getAsignatario(asignadoA)
+				actualizado.asignarA(asignatario)
+			}
 
 			if (Integer.parseInt(id) != actualizado.id) {
 				return badRequest('{ "error" : "Id en URL distinto del cuerpo" }')
