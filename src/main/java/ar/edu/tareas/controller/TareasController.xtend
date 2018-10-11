@@ -5,7 +5,6 @@ import ar.edu.tareas.repos.RepoTareas
 import ar.edu.tareas.repos.RepoUsuarios
 import org.uqbar.commons.model.exceptions.UserException
 import org.uqbar.xtrest.api.Result
-import org.uqbar.xtrest.api.XTRest
 import org.uqbar.xtrest.api.annotation.Body
 import org.uqbar.xtrest.api.annotation.Controller
 import org.uqbar.xtrest.api.annotation.Get
@@ -64,10 +63,6 @@ class TareasController {
 		} catch (Exception e) {
 			badRequest(e.message)
 		}
-	}
-
-	def static void main(String[] args) {
-		XTRest.start(9000, UsuariosController, TareasController)
 	}
 
 }
