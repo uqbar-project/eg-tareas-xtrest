@@ -18,8 +18,13 @@ class TareasController {
 
 	@Get("/tareas")
 	def Result tareas() {
-		val tareas = RepoTareas.instance.allInstances //tareasPendientes
-		ok(tareas.toJson)
+		try {
+			if (1 == 1) throw new RuntimeException("Kaboom!")
+			val tareas = RepoTareas.instance.allInstances //tareasPendientes
+			ok(tareas.toJson)
+		} catch (Exception e) {
+			internalServerError(e.message)
+		}
 	}
 
 	@Get('/tareas/:id')
