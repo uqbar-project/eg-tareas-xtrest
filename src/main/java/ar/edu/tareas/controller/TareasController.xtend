@@ -19,7 +19,7 @@ class TareasController {
 	@Get("/tareas")
 	def Result tareas() {
 		try {
-			if (1 == 1) throw new RuntimeException("Kaboom!")
+			//if (1 == 1) throw new RuntimeException("Kaboom!")
 			val tareas = RepoTareas.instance.allInstances //tareasPendientes
 			ok(tareas.toJson)
 		} catch (Exception e) {
