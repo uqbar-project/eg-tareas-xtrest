@@ -13,7 +13,11 @@ class UsuariosController {
 		
 	@Get("/usuarios")
 	def Result usuarios() {
-		ok(RepoUsuarios.instance.allInstances.toJson)
+		try {
+			ok(RepoUsuarios.instance.allInstances.toJson)
+		} catch (Exception e) {
+			internalServerError(e.message)
+		}
 	}
 	
 }
